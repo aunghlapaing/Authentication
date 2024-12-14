@@ -20,27 +20,57 @@
                     <div class="row">
                         <div class="col-8 offset-2">
 
-                            <form action="./authenticationProcess.php" method="post">
+                            <form action="" method="post">
                                 <div class="">
-                                    <input type="text" class="form-control shadow-sm rounded w-90 mb-3" name="name" id="" placeholder="Enter your name...">
+                                    <input type="text" class="form-control shadow-sm rounded w-90 mt-3" name="name" value="<?php echo $_POST['name'] ?>" id="" placeholder="Enter your name...">
+                                    <?php 
+                                        if (isset($_POST['btn_sigin'])){
+                                            $nameStatus = $_POST['name'] == "" ? false : true;
+
+                                            echo $nameStatus ? "" : "<small class='text-danger'>Required...</small>";
+
+                                        }
+                                    ?>
                                 </div>
 
                                 <div class="">
-                                    <input type="text" class="form-control shadow-sm rounded w-90 mb-3" name="email" id="" placeholder="Enter your email...">
+                                    <input type="text" class="form-control shadow-sm rounded w-90 mt-3" name="email" value="<?php echo $_POST['email'] ?>" id="" placeholder="Enter your email...">
+                                    <?php 
+                                        if (isset($_POST['btn_sigin'])){
+                                            $emailStatus = $_POST['email'] == "" ? false : true;
+                                            echo $emailStatus ?  "" : "<small class='text-danger'>Required...</small>";                                      
+                                        }
+                                    ?>
                                 </div>
 
                                 <div class="">
-                                    <input type="password" class="form-control shadow-sm rounded-5 w-90 mb-3" name="password" id="" placeholder="Enter your password...">
+                                    <input type="password" class="form-control shadow-sm rounded-5 w-90 mt-3" name="password" id="" placeholder="Enter your password...">
+                                    <?php
+                                        if(isset($_POST['btn_sigin'])){
+                                            $passwordStatus = $_POST ['password'] == "" ? false : true;
+                                            echo $passwordStatus ? "" : "<small class='text-danger'>Required...</small> ";
+                                        }
+                                    ?>
                                 </div>
 
                                 <div class="">
-                                    <input type="pasword" class="form-control shadow-sm rounded w-90 mb-3" name="comfirm_password" id="" placeholder="Comfirm your password...">
+                                    <input type="pasword" class="form-control shadow-sm rounded w-90 mt-3" name="confirm_password" id="" placeholder="Comfirm your password...">
+                                    <?php
+                                        if(isset($_POST['btn_sigin'])){
+                                            $passwordConfirmStatus = $_POST ['confirm_password'] == "" ? false : true;
+                                            echo $passwordConfirmStatus ? "" : "<small class='text-danger'>Required...</small> ";
+                                        }
+                                    ?>
                                 </div>
 
                                 <div class="d-flex justify-content-center">
-                                    <button type="submit" class="btn btn-primary rounded shadow-sm " name="btn_sigin" value="sigin">SIGIN</button>
-                                </div>   
+                                    <button type="submit" class="btn btn-primary rounded shadow-sm mt-3" name="btn_sigin" value="sigin">SIGIN</button>
+                                </div>  
+                                    
+                                <?php require_once('./authenticationProcess.php') ?>
                             </form>
+                            
+                            
                                 
                         </div> 
                     </div>
@@ -66,6 +96,8 @@
         
     </div>
 </div>
+
+
 
 
 
