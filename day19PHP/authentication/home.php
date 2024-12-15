@@ -9,6 +9,15 @@
 <body>
     <h1>Home Page</h1>
     <hr>
+    <div class="text-end">
+        <a href="./login.php">
+            <button class="btn btn-danger shadow-sm rounded me-5 text-white"><i class="fa-solid fa-right-from-bracket"></i> logout</button>
+            <?php 
+            session_start();
+            session_destroy();
+            ?>
+        </a>
+    </div>
     <?php 
         session_start();
 

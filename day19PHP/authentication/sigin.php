@@ -64,7 +64,7 @@
                                 </div>
 
                                 <div class="d-flex justify-content-center">
-                                    <button type="submit" class="btn btn-primary rounded shadow-sm mt-3" name="btn_sigin" value="sigin">SIGIN</button>
+                                    <button type="submit" class="btn btn-primary frounded shadow-sm mt-3" name="btn_sigin" value="sigin">Sign In</button>
                                 </div>  
                                     
                                 <?php require_once('./authenticationProcess.php') ?>
@@ -85,7 +85,7 @@
                             <h1>Have an Account?</h1>
                         </div>
                         <div class="d-flex justify-content-center">
-                            <p>Go to loing page to login to your account.</p>
+                            <p>Go to login page to login to your account.</p>
                         </div>
                         <div class="d-flex justify-content-center ">
                             <a href="./login.php" class="btn btn-light text-primary rounded shadow-sm w-20">LOGIN</a>
