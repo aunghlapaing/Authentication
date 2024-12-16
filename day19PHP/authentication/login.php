@@ -1,5 +1,10 @@
 <?php require_once('./header.php') ?>
 
+<?php 
+    session_start();
+    session_destroy();
+?>
+
 <div class="" style="height: 734px">
     <div class="row h-100" >
         <div class="col-7 " style="margin-top: 150px;">
@@ -23,6 +28,12 @@
                             <form action="./authenticationProcess.php" method="post">
                                 <div class="">
                                     <input type="text" class="form-control shadow-sm rounded w-90 mb-3" name="name" id="" placeholder="Enter your name...">
+                                    <?php 
+                                    if (isset($_POST['btn_login'])){
+                                        $nameStatus = $_POST['name'] != "" ? true : false;
+                                        echo $nameStatus ? "True" : "<small class='text-danger'>Required...</small>";
+                                    }
+                                    ?>
                                 </div>
 
                                 <div class="">

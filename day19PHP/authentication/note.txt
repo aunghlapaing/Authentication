@@ -1,0 +1,37 @@
+For User Authentication Process
+- ------------------------- - 
+1. Create a UI desing for user Register and Login
+
+2. Validation
+    if (isset($_POST['btn'])){
+        validationCheck = $_POST == "" ? true : false;
+        echo validationCheck ? "Required" : "";
+    }
+
+3. Use Post method to send the data from page 
+    get the User Data by using Post method 
+    if ($name &&  $email && $passWord){
+        Login Success?
+    }
+
+    Step 2, instead else statement
+
+4. If step 3 statement OK? == > match password?
+    If (Step 4 OK?){
+        $matchpassword = $password == $confirmPassword ? true : false;
+        echo $matchpassword ? "match" : "password do not match, try again";
+    }
+
+5. If step 4 statement OK? == > Strong Password Check?
+
+    If (Step 3 OK?){
+        $passWord == StrongPassword ? true : false;
+        echo $Password ? "StrongPassword" : "Make a strong password";
+    }
+
+
+
+6. If (Step 5 OK?){
+    
+}
+
