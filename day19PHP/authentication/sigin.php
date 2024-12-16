@@ -64,10 +64,10 @@
                                 </div>
 
                                 <div class="d-flex justify-content-center">
-                                    <button type="submit" class="btn btn-primary frounded shadow-sm mt-3" name="btn_sigin" value="sigin">Sign In</button>
+                                    <button type="submit" class="btn btn-primary frounded shadow-sm mt-3" name="btn_sigin" value="sigin">Sigin</button>
                                 </div>  
                                     
-                                <?php require_once('./authenticationProcess.php') ?>
+                                <?php require_once('./Authentication_Sigin.php') ?>
                             </form>
                             
                             

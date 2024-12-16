@@ -9,6 +9,16 @@
 <body>
     <h1>Home Page</h1>
     <hr>
+    <div class="row">
+        <div class="col-8 offset-5">
+            <a href="./sigin.php">
+                <button class="btn btn-primary shadow-sm rounded me-3">Sigin</button>
+            </a>
+            <a href="./login.php">
+                <button class="btn btn-primary shadow-sm rounded">Login</button>
+            </a>
+        </div>
+    </div>
     <div>
         <?php 
             session_start();
@@ -24,6 +34,7 @@
                         </a>
                     </div>
                 ';
+                // session_destroy();
             }else {
                 // header('Location:login.php');
                 echo '
